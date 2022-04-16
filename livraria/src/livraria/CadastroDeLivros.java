@@ -16,7 +16,7 @@ public class CadastroDeLivros {
 		livro.isbn = "978-85-66250-46-6";
 		livro.autor = autor;
 		livro.mostrarDetalhes();
-		autor.mostrarDetalhes();
+		
 		System.out.println("-----------------------");
 		
 		
@@ -30,8 +30,10 @@ public class CadastroDeLivros {
 		outroLivro.descricao = "Crie seu primeiros programas";
 		outroLivro.valor = 59.90;
 		outroLivro.isbn = "978-85-66250-22-0";
+		outroLivro.autor = outroAutor;
 		outroLivro.mostrarDetalhes();
-		outroAutor.mostrarDetalhes();
+		
+		
 		System.out.println("-----------------------");
 		
 		
