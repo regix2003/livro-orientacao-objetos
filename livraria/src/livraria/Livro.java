@@ -6,10 +6,13 @@ public class Livro {
 	private double valor;
 	private String isbn;
 	private Autor autor;
+	private boolean impresso;
 	
 	//construtor
 	public Livro(Autor autor) {
 		this.autor = autor;
+		this.isbn = "000-00-00000-00-0";
+		this.impresso = true;
 		
 	}
 	
@@ -31,9 +34,15 @@ public class Livro {
 		System.out.println("--");
 	}
 	
-	public void aplicaDescontoDe(double porcentagem) {
-		this.valor = this.valor * porcentagem;
+	public boolean aplicaDescontoDe(double porcentagem) {
+		if (porcentagem > 0.3) {
+			return false;
+		}
+		this.valor -= this.valor * porcentagem;
+		return true;
 	}
+	
+
 	
 	boolean temAutor() {
 		return this.autor != null;
